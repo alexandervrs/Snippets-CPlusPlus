@@ -51,22 +51,22 @@ double fn_desktop_icons_show()
 	return 1;
 };
 
-double fn_desktop_get_handle()
+HWND fn_desktop_get_handle()
 {
 	HWND desk = FindWindowEx(NULL, NULL, L"Progman", NULL); //desktop
-	return (DWORD)desk;
+	return desk;
 };
 
-double fn_desktop_taskbar_get_handle()
+HWND fn_desktop_taskbar_get_handle()
 {
 	HWND taskhwnd = FindWindow(L"Shell_traywnd", NULL); //taskbar
-	return (DWORD)taskhwnd;
+	return taskhwnd;
 };
 
-double fn_desktop_startbutton_get_handle()
+HWND fn_desktop_startbutton_get_handle()
 {
 	HWND srthwnd = FindWindowEx(NULL, NULL, L"Button", NULL); //start button
-	return (DWORD)srthwnd;
+	return srthwnd;
 };
 
 
